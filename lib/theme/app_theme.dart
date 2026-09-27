@@ -36,10 +36,10 @@ class AppTheme {
         elevation: 0,
         centerTitle: false,
       ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: AppColors.darkSurface,
         selectedItemColor: AppColors.accent,
-        unselectedItemColor: Colors.white.withOpacity(0.4),
+        unselectedItemColor: Colors.white.withValues(alpha: 0.4),
         type: BottomNavigationBarType.fixed,
       ),
       switchTheme: SwitchThemeData(
@@ -47,7 +47,7 @@ class AppTheme {
             (s) => s.contains(WidgetState.selected) ? AppColors.accent : null),
         trackColor: WidgetStateProperty.resolveWith((s) =>
             s.contains(WidgetState.selected)
-                ? AppColors.accent.withOpacity(0.5)
+                ? AppColors.accent.withValues(alpha: 0.5)
                 : null),
       ),
       textTheme: base.textTheme.apply(fontFamily: 'Roboto'),
