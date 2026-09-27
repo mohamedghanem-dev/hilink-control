@@ -1,0 +1,40 @@
+name: hilink_control_hub
+description: "Custom control dashboard for Huawei B535 HiLink router"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_riverpod: ^2.5.1
+  http: ^1.2.1
+  xml: ^6.5.0
+  crypto: ^3.0.3
+  shared_preferences: ^2.2.3
+  intl: ^0.19.0
+  fl_chart: ^0.68.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/icon.png
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21
+  # The logo already has its own dark background baked in (not a transparent
+  # foreground layer), so we generate plain + round icons from it directly
+  # rather than using the adaptive-icon foreground/background split, which
+  # expects a transparent foreground and would crop this image oddly.
